@@ -1,4 +1,4 @@
-from src.ch6_computing.l6_plus_equals.main import *
+from src.ch06_computing.l06_plus_equals.main import *
 
 run_cases = [
     (1000, 100, 900),

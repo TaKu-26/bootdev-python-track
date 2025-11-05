@@ -1,21 +1,26 @@
-from src.ch06_computing.l14_bitwise_or_operator.main import *
+from src.ch07_comparisons.l02_comparison_operator_evaluations.main import *
 
 run_cases = [
-    (0b0001, 0b0010, 0b0001, 0b1011, 0b1011),
+    (5, 5, 7, 5, (True, True, False)),
+    (6, 6, 5, 5, (False, True, False)),
 ]
 
 submit_cases = run_cases + [
-    (0b0000, 0b0000, 0b0000, 0b1011, 0b1011),
-    (0b1001, 0b0010, 0b1101, 0b1011, 0b1111),
+    (4, 4, 4, 4, (True, True, True)),
+    (2, 2, 2, 2, (True, True, True)),
+    (8, 8, 8, 7, (False, True, True)),
+    (5, 7, 9, 11, (False, False, False)),
+    (11, 9, 7, 5, (False, False, False)),
+    (5, 6, 6, 5, (True, False, True)),
 ]
 
-def test(input1, input2, input3, input4, expected_output):
+def test(elon, sara, jill, bob, expected):
     print("---------------------------------")
-    print(f"Inputs: {input1}, {input2}, {input3}, {input4}")
-    result = calculate_guild_perms(input1, input2, input3, input4)
-    print(f"Expected: {expected_output}")
+    print(f"Inputs: {elon}, {sara}, {jill}, {bob}")
+    result = compare_heights(elon, sara, jill, bob)
+    print(f"Expected: {expected}")
     print(f"Actual:   {result}")
-    if result == expected_output:
+    if result == expected:
         print("Pass")
         return True
     print("Fail")

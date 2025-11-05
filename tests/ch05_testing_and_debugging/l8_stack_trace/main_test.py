@@ -1,4 +1,4 @@
-from src.ch5_testing_and_debugging.l8_stack_trace.main import *
+from src.ch05_testing_and_debugging.l8_stack_trace.main import *
 
 run_cases = [
     (1, 2, 3, "You have 1 strength, 2 wisdom, and 3 dexterity for a total of 6 stats."),

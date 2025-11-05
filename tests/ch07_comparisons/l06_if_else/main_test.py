@@ -1,21 +1,25 @@
-from src.ch06_computing.l14_bitwise_or_operator.main import *
+from src.ch07_comparisons.l06_if_else.main import *
 
 run_cases = [
-    (0b0001, 0b0010, 0b0001, 0b1011, 0b1011),
+    (0, "dead"),
+    (4, "injured"),
 ]
 
 submit_cases = run_cases + [
-    (0b0000, 0b0000, 0b0000, 0b1011, 0b1011),
-    (0b1001, 0b0010, 0b1101, 0b1011, 0b1111),
+    (6, "healthy"),
+    (5, "injured"),
+    (1, "injured"),
+    (10, "healthy"),
+    (-1, "dead"),
 ]
 
-def test(input1, input2, input3, input4, expected_output):
+def test(health, expected_status):
     print("---------------------------------")
-    print(f"Inputs: {input1}, {input2}, {input3}, {input4}")
-    result = calculate_guild_perms(input1, input2, input3, input4)
-    print(f"Expected: {expected_output}")
-    print(f"Actual:   {result}")
-    if result == expected_output:
+    print(f"Health: {health}")
+    result = player_status(health)
+    print(f"Expected: {expected_status}")
+    print(f"Result:   {result}")
+    if result == expected_status:
         print("Pass")
         return True
     print("Fail")

@@ -1,18 +1,27 @@
-from src.ch06_computing.l14_bitwise_or_operator.main import *
+from src.ch07_comparisons.l08_if_else_practice.main import *
 
 run_cases = [
-    (0b0001, 0b0010, 0b0001, 0b1011, 0b1011),
+    ("ash ketchum", "ash ketchum", "brock", "high"),
+    ("brock", "ash ketchum", "brock", "low"),
 ]
 
 submit_cases = run_cases + [
-    (0b0000, 0b0000, 0b0000, 0b1011, 0b1011),
-    (0b1001, 0b0010, 0b1101, 0b1011, 0b1111),
+    ("misty", "brock", "ash ketchum", "neither"),
+    ("red", "red", "blue", "high"),
+    ("blue", "red", "blue", "low"),
+    ("green", "red", "blue", "neither"),
 ]
 
-def test(input1, input2, input3, input4, expected_output):
+def test(
+    player_name, high_scoring_player_name, low_scoring_player_name, expected_output
+):
     print("---------------------------------")
-    print(f"Inputs: {input1}, {input2}, {input3}, {input4}")
-    result = calculate_guild_perms(input1, input2, input3, input4)
+    print(
+        f"Player Name: {player_name}, High Scoring Player: {high_scoring_player_name}, Low Scoring Player: {low_scoring_player_name}"
+    )
+    result = check_high_score(
+        player_name, high_scoring_player_name, low_scoring_player_name
+    )
     print(f"Expected: {expected_output}")
     print(f"Actual:   {result}")
     if result == expected_output:

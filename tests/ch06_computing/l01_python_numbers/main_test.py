@@ -1,4 +1,4 @@
-from src.ch6_computing.l1_python_numbers.main import *
+from src.ch06_computing.l01_python_numbers.main import *
 
 run_cases = [
     (3, 5, 2, 1, 4, (15, 3.0)),

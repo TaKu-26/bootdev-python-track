@@ -1,21 +1,27 @@
-from src.ch06_computing.l14_bitwise_or_operator.main import *
+from src.ch07_comparisons.l13_combat_advantage.main import *
 
 run_cases = [
-    (0b0001, 0b0010, 0b0001, 0b1011, 0b1011),
+    (101, 100, True, False, False),
+    (50, 100, False, True, False),
+    (100, 100, False, False, True),
 ]
 
 submit_cases = run_cases + [
-    (0b0000, 0b0000, 0b0000, 0b1011, 0b1011),
-    (0b1001, 0b0010, 0b1101, 0b1011, 0b1111),
+    (150, 70, True, False, False),
+    (80, 150, False, True, False),
+    (0, 0, False, False, True),
+    (1, 1, False, False, True),
+    (1000, 500, True, False, False),
+    (500, 1000, False, True, False),
 ]
 
-def test(input1, input2, input3, input4, expected_output):
+def test(input1, input2, expected_output1, expected_output2, expected_output3):
     print("---------------------------------")
-    print(f"Inputs: {input1}, {input2}, {input3}, {input4}")
-    result = calculate_guild_perms(input1, input2, input3, input4)
-    print(f"Expected: {expected_output}")
+    print(f"Inputs: {input1}, {input2}")
+    result = combat_evaluation(input1, input2)
+    print(f"Expected: {expected_output1}, {expected_output2}, {expected_output3}")
     print(f"Actual:   {result}")
-    if result == expected_output:
+    if result == (expected_output1, expected_output2, expected_output3):
         print("Pass")
         return True
     print("Fail")

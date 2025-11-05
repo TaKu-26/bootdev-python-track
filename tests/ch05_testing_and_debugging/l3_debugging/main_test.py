@@ -1,4 +1,4 @@
-from src.ch5_testing_and_debugging.l3_debugging.main import *
+from src.ch05_testing_and_debugging.l3_debugging.main import *
 
 run_cases = [
     (100, 5, 2, 20, 65),

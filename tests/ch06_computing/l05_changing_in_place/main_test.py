@@ -1,4 +1,4 @@
-from src.ch6_computing.l5_changing_in_place.main import *
+from src.ch06_computing.l05_changing_in_place.main import *
 
 run_cases = [
     (0, 100, 100),

@@ -1,18 +1,20 @@
-from src.ch06_computing.l14_bitwise_or_operator.main import *
+from src.ch07_comparisons.l07_if_else_practice.main import *
 
 run_cases = [
-    (0b0001, 0b0010, 0b0001, 0b1011, 0b1011),
+    ("ash ketchum", "ash ketchum", "You are the highest scoring player!"),
+    ("brock", "ash ketchum", "You are not the highest scoring player!"),
 ]
 
 submit_cases = run_cases + [
-    (0b0000, 0b0000, 0b0000, 0b1011, 0b1011),
-    (0b1001, 0b0010, 0b1101, 0b1011, 0b1111),
+    ("misty", "brock", "You are not the highest scoring player!"),
+    ("", "", "You are the highest scoring player!"),
+    ("same", "same", "You are the highest scoring player!"),
 ]
 
-def test(input1, input2, input3, input4, expected_output):
+def test(input1, input2, expected_output):
     print("---------------------------------")
-    print(f"Inputs: {input1}, {input2}, {input3}, {input4}")
-    result = calculate_guild_perms(input1, input2, input3, input4)
+    print(f"Inputs: {input1}, {input2}")
+    result = check_high_score(input1, input2)
     print(f"Expected: {expected_output}")
     print(f"Actual:   {result}")
     if result == expected_output:

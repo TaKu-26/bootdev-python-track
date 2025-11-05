@@ -1,4 +1,4 @@
-from src.ch6_computing.l16_converting_binary.main import *
+from src.ch06_computing.l16_converting_binary.main import *
 
 run_cases = [
     ("1", "10", "1010", (1, 2, 10)),

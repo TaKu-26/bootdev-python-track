@@ -1,4 +1,4 @@
-from src.ch6_computing.l7_scientific_notation.main import *
+from src.ch06_computing.l07_scientific_notation.main import *
 
 run_cases = [
     (1.024e18, 1.024e19, 1.024e20),

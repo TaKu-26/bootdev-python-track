@@ -1,4 +1,4 @@
-from src.ch5_testing_and_debugging.l7_debugging_practice.main import *
+from src.ch05_testing_and_debugging.l7_debugging_practice.main import *
 
 run_cases = [
     (100, 20, "Speedster", (120, "Achievement Unlocked: Speedster")),

@@ -1,4 +1,4 @@
-from src.ch6_computing.l13_bitwise_and_operator.main import *
+from src.ch06_computing.l13_bitwise_and_operator.main import *
 
 run_cases = [
     (0b0110, False, True, True, False),
